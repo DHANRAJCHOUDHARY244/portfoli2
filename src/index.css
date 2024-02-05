@@ -1,0 +1,7 @@
+.global-color .setting-toggle {
+  border-radius: 5px;
+}
+
+.global-color .setting-toggle i {
+  animation: rotating 3s infinite linear;
+}
