@@ -1,44 +1,40 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger)
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Home = () => {
     const comp = useRef(null)
     const compM = useRef(null)
-    useLayoutEffect(() => {
-        let ctx = gsap.context(() => {
-            const t1 = gsap.timeline()
-            t1.from("#ICONHEAD", {
-                xPercent: "-100",
-                duration: 1,
-                delay: 0.3,
-                ScrollTrigger:{
-                    trigger:compM.current,
-                    start:"top top",
-                    end:"bottom top",
-                    scrub:true
-                }
-            }).from("#intro-1", {
-                opacity: 0,
-                scale: 2,
-                delay: 0.3,
+    useGSAP(()=>{
+        const t1 = gsap.timeline()
+        t1.from("#ICONHEAD", {
+            xPercent: "-100",
+            duration: 1,
+            delay: 0.3,
+            scrollTrigger: {
+                trigger: "#ICONHEAD",
+              },
+        }).from("#intro-1", {
+            opacity: 0,
+            scale: 2,
+            delay: 0.3,
+        })
+        .from("#intro-2", {
+            text : "Typewriter Effect with GSAP 3!",
+            duration: 2, 
+            ease :  'power1.in',
+            duration: 2,
+            scale:2,
             })
-            .from("#intro-2", {
-                rotateX: 360,
-                duration: 2,
+            .from("#intro-3", {
+                opacity:0,
+                delay:0.1,
                 scale:2,
-                ease:"slow"
-                })
-                .from("#intro-3", {
-                    opacity:0,
-                    delay:0.1,
-                    scale:2
-                })
+            })
+    },{scope:compM})
 
-        }, comp)
 
-        return () => ctx.revert()
-    }, [])
     return (
         <section id="home" ref={compM}>
             <section className="hero-section" ref={comp}>
