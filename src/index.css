@@ -1,7 +1,43 @@
+body::-webkit-scrollbar {
+  width: 5px;}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 50px;
+  cursor: pointer;
+}
 .global-color .setting-toggle {
   border-radius: 5px;
 }
 
 .global-color .setting-toggle i {
   animation: rotating 3s infinite linear;
+}
+.progress-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  z-index: 200;
+  height: 5px;
+  transform-origin: 0%;
+  border-radius:10px;
+}
+.side-progress-bar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #28e98c;
+  z-index: 200;
+  height: 5px;
+  transform-origin: 0%;
+  border-radius: 0 5px 5px 0;
 }
