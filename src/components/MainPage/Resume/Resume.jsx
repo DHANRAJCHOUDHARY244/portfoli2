@@ -3,11 +3,6 @@ import React from 'react'
 const Resume = () => {
     return (
         <section id="resume" className="scroll-to-page">
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
                                 <section className="resume-area">
                                     <div className="custom-container">
                                         <div className="resume-content content-width">
@@ -43,11 +38,6 @@ const Resume = () => {
                                         </div>
                                     </div>
                                 </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
     )

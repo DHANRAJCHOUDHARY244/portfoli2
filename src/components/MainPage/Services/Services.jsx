@@ -3,11 +3,6 @@ import React from 'react'
 const Services = () => {
     return (
         <section id="services" className="scroll-to-page">
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
                                 <section className="services-area">
                                     <div className="custom-container">
                                         <div className="services-content content-width">
@@ -46,11 +41,6 @@ const Services = () => {
                                         </div>
                                     </div>
                                 </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
     )

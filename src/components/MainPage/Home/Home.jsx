@@ -1,10 +1,8 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, {  useRef} from 'react'
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import TextPlugin from 'gsap/TextPlugin';
-import { data } from 'jquery';
 import InfiniteText from './InfiniteText';
+import Counter from './Counter';
 gsap.registerPlugin(useGSAP);
 
 
@@ -94,14 +92,20 @@ const Home = () => {
                             <i className="las la-arrow-down" />
                         </a>
                         <div className="facts d-flex">
-                            <div className="left scroll-animation" data-animation="fade_from_left">
-                                <h1 className='NumCounters'>2+</h1>
-                                <p>Years of <br />Experience</p>
-                            </div>
-                            <div className="right scroll-animation" >
-                                <h1 className='NumCounters'>22+</h1>
-                                <p>projects completed on <br />4 States</p>
-                            </div>
+                            <Counter
+                                className={'left'}
+                                duration={4}
+                                text1={'Years of'}
+                                text2={'Experience'}
+                                value={2}
+                            />
+                            <Counter
+                                className={'right'}
+                                duration={4}
+                                text1={'projects completed on'}
+                                text2={'4 States'}
+                                value={22}
+                            />
                         </div>
                     </div>
                 </div>

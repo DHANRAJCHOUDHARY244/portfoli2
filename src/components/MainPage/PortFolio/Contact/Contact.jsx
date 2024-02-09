@@ -3,11 +3,6 @@ import React from 'react'
 const Contact = () => {
     return (
         <section id="contact" className="scroll-to-page">
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
                                 <section className="contact-area">
                                     <div className="custom-container">
                                         <div className="contact-content content-width">
@@ -133,11 +128,6 @@ const Contact = () => {
                                         </div>
                                     </div>
                                 </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
     )

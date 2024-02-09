@@ -3,11 +3,6 @@ import React from 'react'
 const Pricing = () => {
     return (
         <section id="pricing">
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
                                 <section className="pricing-area">
                                     <div className="custom-container">
                                         <div className="pricing-content content-width">
@@ -186,11 +181,7 @@ const Pricing = () => {
                                         </div>
                                     </div>
                                 </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                           
         </section>
 
     )

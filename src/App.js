@@ -20,7 +20,7 @@ function App() {
     restDelta: 0.001,
   });
   return (
-    <div className="#">
+    <div className="#"> 
       <VideoComp />
       <motion.div
         className='progress-bar'
