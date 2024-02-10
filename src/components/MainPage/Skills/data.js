@@ -4,6 +4,7 @@ export const data = [
         name: 'Figma',
         img: '/img/skills/figma.png',
         per: 92,
+        animation:'fade_from_right',
         style:{
           
         }
@@ -13,6 +14,7 @@ export const data = [
         name: 'Framer',
         img: '/img/skills/framer.png',
         per: 85,
+        animation:'fade_from_left',
         style:{
             
         }
@@ -22,6 +24,7 @@ export const data = [
         name: 'Webflow',
         img: '/img/skills/webflow.png',
         per: 85,
+        animation:'fade_from_top',
         style:{
             
         }
@@ -31,6 +34,7 @@ export const data = [
         name: 'Node',
         img: '/img/skills/node.png',
         per: 95,
+        animation:'fade_from_bottom',
         style:{
             width: 50, height: 60
         }
@@ -40,6 +44,7 @@ export const data = [
         name: 'React',
         img: '/img/skills/react.png',
         per: 98,
+        animation:'fade_from_right',
         style:{
             
         }
@@ -49,6 +54,7 @@ export const data = [
         name: 'WordPress',
         img: '/img/skills/wordpress.png',
         per: 99,
+        animation:'fade_from_left',
         style:{
             
         }
@@ -58,6 +64,7 @@ export const data = [
         name: 'MongoDb',
         img: '/img/skills/mongo.png',
         per: 85,
+        animation:'fade_from_top',
         style:{
             width: 40, height: 60
         }
@@ -67,6 +74,7 @@ export const data = [
         name: 'Mysql',
         img: '/img/skills/sql.png',
         per: 94,
+        animation:'fade_from_bottom',
         style:{
             width: 60, height: 70 
         }

@@ -1,0 +1,35 @@
+@keyframes typing {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  } 
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  from {
+      transform: scale(2); 
+  }
+  to {
+      transform: scale(1); 
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+}
+

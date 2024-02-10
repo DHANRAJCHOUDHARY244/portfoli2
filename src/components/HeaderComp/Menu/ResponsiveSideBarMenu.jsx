@@ -1,9 +1,11 @@
 import React from 'react'
 
-const ResponsiveSideBarMenu = () => {
+const ResponsiveSideBarMenu = (props) => {
     return (
-        <div className="responsive-sidebar-menu">
-            <div className="overlay" />
+        <div className={`responsive-sidebar-menu ${props.menuStatus? 'active' : ''}`}>
+            <div className="overlay"  onClick={()=>{
+                props.Close()
+            }} />
             <div className="sidebar-menu-inner">
                 <div className="menu-wrap">
                     <p>Menu</p>

@@ -1,20 +1,18 @@
 import React from 'react'
 import PopupOverlay from '../../PopupOverlay/PopupOverlay'
 import { ProjectData } from './data'
+import Heading from '../../../Animations/Heading'
 const PortfolioArea = () => {
     return (
         <section className="portfolio-area">
             <div className="custom-container">
                 <div className="portfolio-content content-width">
-                    <div className="section-header">
-                        <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
-                            <i className="las la-grip-vertical" /> portfolio
-                        </h4>
-                        <h1 className="scroll-animation" data-animation="fade_from_bottom">
-                            Featured
-                            <span>Projects</span>
-                        </h1>
-                    </div>
+                    <Heading
+                            heading={'portfolio'}
+                            subHeading1={"Featured"}
+                            subHeading2={'Projects'}
+                            iconClass={"las la-grip-vertical"}
+                        />
                     <div className="row portfolio-items">
                         {ProjectData.map((item) => (
                             <div className="col-md-12 scroll-animation" data-animation="fade_from_bottom" key={item.id}>

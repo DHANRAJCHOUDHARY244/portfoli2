@@ -1,4 +1,5 @@
 import React from 'react'
+import Heading from '../Animations/Heading'
 
 const ContactPopup = () => {
     return (
@@ -12,14 +13,12 @@ const ContactPopup = () => {
                                     <section className="services-area">
                                         <div className="custom-container">
                                             <div className="services-content content-width">
-                                                <div className="section-header">
-                                                    <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                                        <i className="las la-envelope" /> Contact Information
-                                                    </h4>
-                                                    <h1 className="scroll-animation" data-animation="fade_from_bottom">Connect with
-                                                        <span>DHANRAJ CHOUDHARY</span>
-                                                    </h1>
-                                                </div>
+                                                <Heading
+                        heading={'Contact Information'}
+                        subHeading1={'Connect with'}
+                        subHeading2={'DHANRAJ CHOUDHARY'}
+                        iconClass={"las la-envelope"}
+                    />
                                                 <div className="services-items">
                                                     <style dangerouslySetInnerHTML={{ __html: "\n                                                                .services-items .service-item .a {\n                                                                    left: 0px;\n                                                                    margin: 10px;\n                                                                    position: unset;\n                                                                    display: inline;\n                                                                }\n\n                                                                .services-items .service-item span {\n                                                                    margin-top: -10px;\n                                                                    display: block;\n                                                                }\n\n                                                                .services-items .service-item li {\n                                                                    margin-left: 20px;\n                                                                }\n\n                                                                .services-items .service-item {\n                                                                    align-items: center;\n                                                                }\n                                                            " }} />
                                                     <div className="service-item scroll-animation" data-animation="fade_from_bottom">

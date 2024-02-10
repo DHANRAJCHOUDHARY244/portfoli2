@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import InfiniteText from './InfiniteText';
 import Counter from './Counter';
+import Heading from '../../Animations/Heading';
 gsap.registerPlugin(useGSAP);
 
 
@@ -57,9 +58,10 @@ const Home = () => {
                 <div className="custom-container">
                     <div className="hero-content content-width">
                         <div className="section-header">
-                            <h4 className="subtitle scroll-animation" id="ICONHEAD">
-                                <i className="las la-home" /> INTRODUCE
-                            </h4>
+                        <Heading
+                        heading={'INTRODUCE'}
+                        iconClass={"las la-home"}
+                    />
                             <h1 id="intro-1">Say
                                 Hi from
                                 <div id="intro-2" ><InfiniteText text={'Dhanraj ,'} speed={2} />
@@ -67,6 +69,7 @@ const Home = () => {
                                 <div id="intro-3">Webflow Designer and Developer</div>
                             </h1>
                         </div>
+                     
                         <p ref={paraRef}>
                             <span> I</span>
                             <span> design</span>

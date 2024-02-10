@@ -1,9 +1,15 @@
 import { gsap } from 'gsap';
 import React, { useEffect, useRef, useState } from 'react'
-import { data } from './data'
+import { clients, data } from './data'
 import { useGSAP } from '@gsap/react';
+import Heading from '../../../Animations/Heading';
+import TypingText from '../../../Animations/TypingText';
+import './animation.scss'
+import { useInView } from 'framer-motion';
 const Testmonials = () => {
     const divRef = useRef(null);
+    const refHeader = useRef(null)
+    const inViewH = useInView(refHeader);
     const idArray = data.map(item => item.id);
     const [testId, settestId] = useState(idArray[0]);
     useGSAP(()=>{
@@ -53,17 +59,12 @@ const Testmonials = () => {
             <section className="testimonial-area">
                 <div className="custom-container">
                     <div className="testimonial-content content-width">
-                        <div className="section-header">
-                            <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                <i className="lar la-comment" />
-                                testimonial
-                            </h4>
-                            <h1 className="scroll-animation" data-animation="fade_from_bottom">
-                                Trusted by
-                                <span>Hundred
-                                    Clients</span>
-                            </h1>
-                        </div>
+                        <Heading
+                            heading={'testimonial'}
+                            subHeading1={"Trusted by"}
+                            subHeading2={'Hundred Clients'}
+                            iconClass={"lar la-comment"}
+                        />
                         <div className="testimonial-slider-wrap ">
                             <div className=" testimonial-slider" ref={divRef}>
                                 {data.map((item) => (
@@ -80,7 +81,8 @@ const Testmonials = () => {
                                                         <a href={item.webLink}><span>{item.company}</span></a>
                                                     </p>
                                                 </div>
-                                            </div> <p>Dhanraj - A Developer with the creativity, professional and master of code. Much more than what i'm expect. High quality product &amp; flexiable price. Recommended!.”
+                                            </div> <p>
+                                            <TypingText text={item.desc}/>
                                             </p>
                                             <a href={item.webLink} className="project-btn">Project</a>
                                         </div>
@@ -101,45 +103,16 @@ const Testmonials = () => {
                             </div>
                         </div>
                         <div className="clients-logos">
-                            <h4 className="scroll-animation" data-animation="fade_from_bottom">
+                            <h5  data-animation="fade_from_bottom">
                                 work
                                 with 15+
-                                brands in INDIA </h4>
-                            <div className="row align-items-center">
-                                <style dangerouslySetInnerHTML={{ __html: "\n                                                                                            .CI {\n                                                                                                width: 180px;\n                                                                                                height: 70px;\n                                                                                                object-fit: contain;\n                                                                                            }\n                                                                                        " }} />
-                                <div className="col-md-4 scroll-animation" data-animation="fade_from_left">
-                                    <a href="https://www.tanlerida.com/"><img decoding="async" className="CI" src="/img/client-1.png" /></a>
+                                brands in INDIA </h5>
+                            <div className="row align-items-center" ref={refHeader}>
+                            {clients.map(item=>(
+                                <div className={`col-md-4 ${inViewH?item.animation:''} `} key={item.id}>
+                                    <a href={item.link}><img  className="CI" src={item.img} alt={item.img} /></a>
                                 </div>
-                                <div className="col-md-4 scroll-animation" data-animation="fade_from_bottom">
-                                    <a href="https://www.ambergroupindia.com/"><img decoding="async" className="CI" src="/img/client-2.png" /></a>
-                                </div>
-                                <div className="col-md-4 scroll-animation" data-animation="fade_from_top">
-                                    <a href="https://ivtpl.com/picldemo/">
-                                        <img decoding="async" className="CI" src="/img/client-3.png" /></a>
-                                </div>
-                                <div className="col-md-4 scroll-animation" data-animation="fade_from_right">
-                                    <a href="https://gdgps.gdgoenka.com/">
-                                        <img decoding="async" className="CI" src="/img/client-4.png" /></a>
-                                </div>
-                                <div className="col-md-4 scroll-animation" data-animation="fade_from_left">
-                                    <a href="https://ivtpl.com/"><img decoding="async" className="CI" src="/img/client-5.png" /></a>
-                                </div>
-                                <div className="col-md-4 scroll-animation" data-animation="fade_from_bottom">
-                                    <a href="https://iccillsr.in/">
-                                        <img decoding="async" className="CI" src="/img/client-6.png" /></a>
-                                </div>
-                                <div className="col-md-4 scroll-animation" data-animation="fade_from_bottom">
-                                    <a href="https://applegroveschool.wpcomstaging.com/">
-                                        <img decoding="async" className="CI" src="/img/client-7.png" /></a>
-                                </div>
-                                <div className="col-md-4 scroll-animation" data-animation="fade_from_bottom">
-                                    <a href="https://sanskarschool.online/">
-                                        <img decoding="async" className="CI" src="/img/client-8.png" /></a>
-                                </div>
-                                <div className="col-md-4 scroll-animation" data-animation="fade_from_bottom">
-                                    <a href="https://www.vasavipridevijayamawards.com/">
-                                        <img decoding="async" className="CI" src="/img/client-9.png" /></a>
-                                </div>
+                            ))}
                             </div>
                         </div>
                     </div>

@@ -469,6 +469,7 @@ main.drake-main {
     right: 20px;
     top: 20px;
     color: #fff;
+    cursor: pointer;
     font-size: 20px;
 }
 

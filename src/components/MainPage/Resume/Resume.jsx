@@ -1,43 +1,42 @@
-import React from 'react'
-
+import { motion, useInView } from 'framer-motion'
+import React, { useRef } from 'react'
+import { data } from './data'
+import './Animation.css'
+import Heading from '../../Animations/Heading'
 const Resume = () => {
+    const ref = useRef(null)
+    const inView = useInView(ref);
+
     return (
-        <section id="resume" className="scroll-to-page">
-                                <section className="resume-area">
-                                    <div className="custom-container">
-                                        <div className="resume-content content-width">
-                                            <div className="section-header">
-                                                <h4 className="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                                    <i className="las la-briefcase" /> resume
-                                                </h4>
-                                                <h1 className="scroll-animation" data-animation="fade_from_bottom">
-                                                    Education &amp;
-                                                    <span>Experience</span>
-                                                </h1>
-                                            </div>
-                                            <div className="resume-timeline">
-                                                <div className="item scroll-animation" data-animation="fade_from_right">
-                                                    <span className="date">2023 - Present</span>
-                                                    <h2>Framer Desinger &amp; Developer</h2>
-                                                    <p>Freelance</p>
-                                                    <h2>Front-End WordPress Developer</h2>
-                                                    <p>Innovator TechLine</p>
-                                                </div>
-                                                <div className="item scroll-animation" data-animation="fade_from_right">
-                                                    <span className="date">2022 - 2023</span>
-                                                    <h2>Webflow Developer</h2>
-                                                    <p>Freelance</p>
-                                                </div>
-                                                <div className="item scroll-animation" data-animation="fade_from_right"> <span className="date">2021 - 2022</span>
-                                                    <h2>Web Designer</h2>
-                                                    <p>Freelance</p>
-                                                    <h2>MERN Stack</h2>
-                                                    <p>Freelance</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+        <section id="resume" >
+            <section className="resume-area">
+                <div className="custom-container">
+                    <div className="resume-content content-width">
+                    <Heading
+                        heading={'resume'}
+                        subHeading1={' Education &'}
+                        subHeading2={'Experience'}
+                        iconClass={"las la-briefcase"}
+                    />
+                        <div className="resume-timeline" ref={ref}>
+                            {data.map(item => (
+                                <motion.div className={`
+                                item ${inView ? 'timelineRight' : ''}
+                                `}
+                                    key={item.id}>
+                                    <span className="date">{item.year}</span>
+                                    {item.item.map(subItem => (
+                                        <>
+                                            <h2 key={subItem.id}>{subItem.heading}</h2>
+                                            <p key={subItem.id}>{subItem.subHeading}</p>
+                                        </>
+                                    ))}
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
     )

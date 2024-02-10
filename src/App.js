@@ -11,14 +11,22 @@ import MainWrapper from './components/MainWrapper';
 import LeftSidebar from './components/LeftSidebar/LeftSidebar';
 import ContactPopup from './components/LeftSidebar/ContactPopup';
 import { useScroll, motion, useSpring } from 'framer-motion';
+import { useState } from 'react';
 
 function App() {
   const { scrollYProgress } = useScroll();
+  const [isActive, setIsActive] = useState(false);
+  const openMenu=()=>{
+    setIsActive(true)
+  }
+  const closeMenu=()=>{
+    setIsActive(false)
+  }
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
-  });
+  }); 
   return (
     <div className="#"> 
       <VideoComp />
@@ -35,9 +43,9 @@ function App() {
         }}
       />
       {/* <Loader/> */}
-      <MenuIcon />
-      <SettingIco />
-      <ResponsiveSideBarMenu />
+      <MenuIcon Open={openMenu} />
+      <SettingIco   />
+      <ResponsiveSideBarMenu menuStatus={isActive} Close={closeMenu} />
       <ScrollNav />
       <MainWrapper >
         <LeftSidebar />

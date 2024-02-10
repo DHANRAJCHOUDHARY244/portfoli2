@@ -25,8 +25,7 @@ $(function () {
 
         $(document).on('click', ".global-color .setting-toggle", function () {
             $(".global-color").addClass("active");
-        });
-
+        }); 
         $(document).on('click', ".global-color .inner .overlay, .global-color .inner .global-color-option .close-settings", function () {
             $(".global-color").removeClass("active");
         });

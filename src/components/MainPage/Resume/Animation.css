@@ -1,0 +1,26 @@
+
+
+.resume-timeline .timelineRight:nth-child(1){
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 0.05s;
+}
+.resume-timeline .timelineRight:nth-child(2){
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 1s;
+}
+.resume-timeline .timelineRight:nth-child(3){
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 2s;
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(-30%, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
