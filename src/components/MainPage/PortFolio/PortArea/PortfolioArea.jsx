@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import PopupOverlay from '../../PopupOverlay/PopupOverlay'
 import { ProjectData } from './data'
 import Heading from '../../../Animations/Heading'
+import { useInView } from 'framer-motion'
+import './animation.scss'
 const PortfolioArea = () => {
+    const ref=useRef(null)
+    const inViewH=useInView(ref)
     return (
         <section className="portfolio-area">
             <div className="custom-container">
@@ -13,9 +17,9 @@ const PortfolioArea = () => {
                             subHeading2={'Projects'}
                             iconClass={"las la-grip-vertical"}
                         />
-                    <div className="row portfolio-items">
+                    <div className="row portfolio-items" ref={ref}>
                         {ProjectData.map((item) => (
-                            <div className="col-md-12 scroll-animation" data-animation="fade_from_bottom" key={item.id}>
+                            <div className={`col-md-12 ${inViewH?'fade_from_bottom':''}`} key={item.id}>
                                 <div className="portfolio-item portfolio-full">
                                     <div className="portfolio-item-inner">
                                         <a href="/img/portfolio4.png" data-lightbox="example-1">

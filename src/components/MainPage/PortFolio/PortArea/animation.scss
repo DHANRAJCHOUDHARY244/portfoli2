@@ -1,0 +1,16 @@
+.fade_from_bottom {
+    opacity: 0;
+    transform: translateY(100px) scale(0.5);
+    animation: fadeBottom 2s ease-in-out forwards;
+}
+
+@keyframes fadeBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100px) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

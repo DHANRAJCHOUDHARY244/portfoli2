@@ -27,7 +27,10 @@ const LeftSidebar = () => {
                     <a href="https://github.com/DHANRAJCHOUDHARY244"><i className="lab la-github" /></a>
                 </li>
             </ul>
-            <a href="#contact" className="theme-btn " id="open-popup">
+            <a href="#contact" className="theme-btn " onClick={() => {
+                document.getElementById("HIRE").style.display = "block";
+                document.getElementById("PAGE").style.display = "none";
+            }}>
                 <i className="las la-envelope" /> Hire Me! </a>
         </div>
 

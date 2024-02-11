@@ -5,7 +5,7 @@ export const data = [
         img: '/img/skills/figma.png',
         per: 92,
         animation:'fade_from_right',
-        style:{
+        style:{ 
           
         }
     },
