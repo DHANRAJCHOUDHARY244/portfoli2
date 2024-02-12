@@ -4,37 +4,40 @@ import { ProjectData } from './data'
 import Heading from '../../../Animations/Heading'
 import { useInView } from 'framer-motion'
 import './animation.scss'
+import LazyImage from '../../../LazyImage/LazyImage'
 const PortfolioArea = () => {
-    const ref=useRef(null)
-    const inViewH=useInView(ref)
+    const ref = useRef(null)
+    const inViewH = useInView(ref)
     return (
         <section className="portfolio-area">
             <div className="custom-container">
                 <div className="portfolio-content content-width">
                     <Heading
-                            heading={'portfolio'}
-                            subHeading1={"Featured"}
-                            subHeading2={'Projects'}
-                            iconClass={"las la-grip-vertical"}
-                        />
+                        heading={'portfolio'}
+                        subHeading1={"Featured"}
+                        subHeading2={'Projects'}
+                        iconClass={"las la-grip-vertical"}
+                    />
                     <div className="row portfolio-items" ref={ref}>
                         {ProjectData.map((item) => (
-                            <div className={`col-md-12 ${inViewH?'fade_from_bottom':''}`} key={item.id}>
+                            <div className={`col-md-12 ${inViewH ? 'fade_from_bottom' : ''}`} key={item.id}>
                                 <div className="portfolio-item portfolio-full">
                                     <div className="portfolio-item-inner">
                                         <a href="/img/portfolio4.png" data-lightbox="example-1">
-                                            <img src={item.img} style={{ objectFit: 'contain' }} alt />
+                                            <LazyImage
+                                                src={item.img} style={{ objectFit: 'contain' }} alt
+                                            />
                                         </a>
                                         <ul className="portfolio-categories">
                                             <li>
-                                               <PopupOverlay src={item.src} />
+                                                <PopupOverlay src={item.src} />
                                             </li>
-                                            {item.buttons.map((btn)=>(
+                                            {item.buttons.map((btn) => (
                                                 <li key={btn.id}>
-                                                <a href="#portfolio">{btn.name}</a>
-                                            </li>
+                                                    <a href="#portfolio">{btn.name}</a>
+                                                </li>
                                             ))}
-                                            
+
                                         </ul>
                                     </div>
                                     <h2><a href="https://dashboarddj.pages.dev/">React

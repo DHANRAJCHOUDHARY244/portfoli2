@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import InfiniteText from './InfiniteText';
 import Counter from './Counter';
 import Heading from '../../Animations/Heading';
+import LazyImage from '../../LazyImage/LazyImage';
 gsap.registerPlugin(useGSAP);
 
 
@@ -90,8 +91,11 @@ const Home = () => {
                             <span> like</span>
                             <span> that</span>
                             <span> !</span></p>
-                        <a href="#portfolio" className="go-to-project-btn scroll-to scroll-animation" >
-                            <img decoding="async" src="/img/round-text.png" alt="Rounded Text" />
+                        <a href="#portfolio" className="go-to-project-btn" >
+                            <LazyImage
+                                src={"/img/round-text.png"}
+                                alt="Rounded Text"
+                            />
                             <i className="las la-arrow-down" />
                         </a>
                         <div className="facts d-flex">

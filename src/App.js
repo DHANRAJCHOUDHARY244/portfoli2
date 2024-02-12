@@ -9,7 +9,7 @@ import ScrollNav from './components/HeaderComp/Menu/ScrollNav';
 import MainWrapper from './components/MainWrapper';
 import LeftSidebar from './components/LeftSidebar/LeftSidebar';
 import ContactPopup from './components/LeftSidebar/ContactPopup';
-import { useScroll, motion, useSpring } from 'framer-motion';
+import { useScroll, motion } from 'framer-motion';
 
 const MainPage = React.lazy(() => import('./components/MainPage'));
 

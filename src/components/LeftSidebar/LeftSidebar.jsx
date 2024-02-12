@@ -1,13 +1,18 @@
 import React from 'react'
+import LazyImage from '../LazyImage/LazyImage';
 
 const LeftSidebar = () => {
     return (
         <div className="left-sidebar">
             <div className="sidebar-header d-flex align-items-center justify-content-between">
-                <img src="/img/logo.png" alt="Logo" />
+                <LazyImage
+                    src="/img/logo.png" alt="Logo"
+                />
                 <span className="designation">Web &amp; Full Stack Developer</span>
             </div>
-            <img className="me" src="/img/me.jpg" alt="Me" />
+            <LazyImage
+                src={"/img/me.jpg"} alt={'Me'} className={"me"}
+            />
             <h2 className="email" style={{ fontSize: 18 }}>choudharydhanraj239@gmail.com</h2>
             <h2 className="address">Based in Ajmer, INDIA</h2>
             <p className="copyright">©

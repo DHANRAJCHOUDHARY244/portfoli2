@@ -3,6 +3,7 @@ import { data } from './data'
 import Counter from './Counter'
 import Heading from '../../Animations/Heading'
 import { useInView } from 'framer-motion'
+import LazyImage from '../../LazyImage/LazyImage'
 const Skill = () => {
     const refHeader = useRef(null)
     const inViewH = useInView(refHeader);
@@ -23,7 +24,9 @@ const Skill = () => {
                                 <div className={`col-md-3 ${inViewH?item.animation:''}`} key={item.id}>
                                     <div className="skill">
                                         <div className="skill-inner">
-                                            <img decoding="async" src={item.img} alt={item.name} style={item.style} />
+                                            <LazyImage
+                                                 src={item.img} alt={item.name} style={item.style}
+                                            />
                                             <Counter
                                                 value={item.per}
                                                 duration={5}
