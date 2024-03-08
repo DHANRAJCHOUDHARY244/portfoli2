@@ -15,7 +15,7 @@ const Email = () => {
                 "template_6hz1hyt",
                 form.current,
                 {
-                    publicKey: 'Gq2Lu2fEVTHmYLQyM',
+                    publicKey: 'T0yJnRCF2MNJCg8bl',
                 }
             )
             .then(
@@ -23,16 +23,16 @@ const Email = () => {
                     setMessageVisible(true);
                     setError('')
                     form.current.reset();
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         setMessageVisible(false)
-                    },3000)
+                    }, 3000)
                 },
                 (error) => {
                     setMessageVisible(false);
                     setError(error.text)
-                    setTimeout(()=>{
-                    setError('')
-                    },3000)
+                    setTimeout(() => {
+                        setError('')
+                    }, 3000)
                 }
             );
     };
@@ -41,9 +41,9 @@ const Email = () => {
     return (
         <>
             <form className="wpcf7-form init" encType="multipart/form-data" ref={form} onSubmit={sendEmail}>
-                <div className={`${messageVisible?'alert-success':error!==''?'alert':''} messenger-box-contact__msg`} style={{ display: messageVisible ? 'block' : 'none' }}>
+                <div className={`${messageVisible ? 'alert-success' : error !== '' ? 'alert' : ''} messenger-box-contact__msg`} style={{ display: messageVisible ? 'block' : 'none' }}>
                     {messageVisible && <p>Your message was sent successfully.</p>}
-                    {error!=='' && <p>{error}</p>}
+                    {error !== '' && <p>{error}</p>}
                 </div>
                 <div className="row">
                     <div className="col-md-6">

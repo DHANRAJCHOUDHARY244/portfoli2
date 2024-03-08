@@ -23,7 +23,7 @@ const PortfolioArea = () => {
                             <div className={`col-md-12 ${inViewH ? 'fade_from_bottom' : ''}`} key={item.id}>
                                 <div className="portfolio-item portfolio-full">
                                     <div className="portfolio-item-inner">
-                                        <a href="/img/portfolio4.png" data-lightbox="example-1">
+                                        <a href="/img/portfolio4.png" >
                                             <LazyImage
                                                 src={item.img} style={{ objectFit: 'contain' }} alt
                                             />
@@ -40,8 +40,7 @@ const PortfolioArea = () => {
 
                                         </ul>
                                     </div>
-                                    <h2><a href="https://dashboarddj.pages.dev/">React
-                                        Dashboard </a></h2>
+                                    <h2><a href={item.src}>{item.name}</a></h2>
                                 </div>
                             </div>
                         ))}
