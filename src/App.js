@@ -1,5 +1,6 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
 import VideoComp from './components/VideoComp/VideoComp';
 import Loader from './components/Loader/Loader';
 import MenuIcon from './components/HeaderComp/Menu/MenuIcon';
@@ -55,7 +56,7 @@ function App() {
             <Suspense fallback={<Loader />}>
               <MainPage />
             </Suspense>
-           
+            <Analytics />
           </MainWrapper>
         </>
       )}
