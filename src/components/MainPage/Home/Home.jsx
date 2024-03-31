@@ -1,4 +1,4 @@
-import React, {  useRef} from 'react'
+import React, { useRef } from 'react'
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import InfiniteText from './InfiniteText';
@@ -10,8 +10,8 @@ gsap.registerPlugin(useGSAP);
 
 const Home = () => {
     const compM = useRef(null)
-    const paraRef= useRef(null)
-   
+    const paraRef = useRef(null)
+
     useGSAP(() => {
         const t1 = gsap.timeline()
         t1.from("#ICONHEAD", {
@@ -33,44 +33,44 @@ const Home = () => {
     }, { scope: compM })
 
     useGSAP(() => {
-        const t1 = gsap.timeline({ duration: 2 }); 
-        gsap.from(paraRef.current,{
-            scale:5,
+        const t1 = gsap.timeline({ duration: 2 });
+        gsap.from(paraRef.current, {
+            scale: 5,
             ease: 'power2.inOut',
-            duration:4
-        }) 
+            duration: 4
+        })
         t1.fromTo('span', {
             opacity: 0,
-        }, { 
+        }, {
             opacity: 1,
             stagger: 0.1 // Adjust stagger here if needed
         });
     }, { scope: paraRef });
-    
-    useGSAP(()=>{
-        gsap.from('.NumCounters',{
-            scale:2,
-            duration:3
+
+    useGSAP(() => {
+        gsap.from('.NumCounters', {
+            scale: 2,
+            duration: 3
         })
     })
     return (
         <section id="home" ref={compM}>
-            <section className="hero-section" > 
+            <section className="hero-section" >
                 <div className="custom-container">
                     <div className="hero-content content-width">
                         <div className="section-header">
-                        <Heading
-                        heading={'INTRODUCE'}
-                        iconClass={"las la-home"}
-                    />
+                            <Heading
+                                heading={'INTRODUCE'}
+                                iconClass={"las la-home"}
+                            />
                             <h1 id="intro-1">Say
                                 Hi from
                                 <div id="intro-2" ><InfiniteText text={'Dhanraj ,'} speed={2} />
                                 </div>
-                                <div id="intro-3">Webflow Designer and Developer</div>
+                                <div id="intro-3">Full Stack Developer</div>
                             </h1>
                         </div>
-                     
+
                         <p ref={paraRef}>
                             <span> I</span>
                             <span> design</span>
