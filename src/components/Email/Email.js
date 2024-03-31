@@ -64,7 +64,7 @@ const Email = () => {
                                 <sup>*</sup></label><span className="wpcf7-form-control-wrap" data-name="email">
                                     <input id="email" size={40} className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email input-group"
                                         required
-                                        placeholder="Your email adress" defaultValue type="email" name="email" /></span>
+                                        placeholder="Your email adress" type="email" name="email" /></span>
                             </p>
                         </div>
                     </div>

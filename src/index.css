@@ -12,6 +12,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50px;
   cursor: pointer;
 }
+
 .global-color .setting-toggle {
   border-radius: 5px;
 }
@@ -19,6 +20,7 @@ body::-webkit-scrollbar-thumb {
 .global-color .setting-toggle i {
   animation: rotating 3s infinite linear;
 }
+
 .progress-bar {
   position: fixed;
   top: 0;
@@ -31,6 +33,7 @@ body::-webkit-scrollbar-thumb {
   transform-origin: 0%;
   border-radius: 10px;
 }
+
 .side-progress-bar {
   position: fixed;
   top: 0;
@@ -42,8 +45,13 @@ body::-webkit-scrollbar-thumb {
   transform-origin: 0%;
   border-radius: 0 5px 5px 0;
 }
+
 .CI {
   width: 180px;
   height: 70px;
   object-fit: contain;
+}
+
+option {
+  background-color: rgba(0, 0, 0, 0.847);
 }

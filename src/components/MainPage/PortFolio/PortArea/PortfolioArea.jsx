@@ -20,7 +20,7 @@ const PortfolioArea = () => {
                     />
                     <div className="row portfolio-items" ref={ref}>
                         {ProjectData.map((item) => (
-                            <div className={`col-md-12 ${inViewH ? 'fade_from_bottom' : ''}`} key={item.id}>
+                            <div className={`col-md-6 ${inViewH ? 'fade_from_bottom' : ''}`} key={item.id}>
                                 <div className="portfolio-item portfolio-full">
                                     <div className="portfolio-item-inner">
                                         <a href="/img/portfolio4.png" >

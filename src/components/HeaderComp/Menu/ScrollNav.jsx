@@ -43,6 +43,11 @@ const ScrollNav = () => {
                     <span>Contact</span> <i className="las la-envelope" />
                 </a>
             </li>
+            <li>
+                <a className="scroll-to" href="https://my-projects-e3u.pages.dev/">
+                    <span>Blogs</span> <i class="lar la-newspaper"></i>
+                </a>
+            </li>
         </ul>
 
     )

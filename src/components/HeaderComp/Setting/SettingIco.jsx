@@ -12,12 +12,14 @@ const SettingIco = () => {
     };
     return (
         <div className={`global-color ${isActive ? 'active' : ''}`}>
-            <div className='d-flex gap-md-2  gap-1' style={{marginTop:'-30px'}}>
+            <div className='d-flex gap-md-2  gap-1' style={{ marginTop: '-30px' }}>
                 <span className="setting-toggle" onClick={settingOpen}>
                     <i className="las la-cog" />
                 </span>
                 <span className="setting-toggle">
-                    <i class="lar la-newspaper"></i>
+                    <a href="https://my-projects-e3u.pages.dev/">
+                        <i class="lar la-newspaper"></i>
+                    </a>
                 </span>
             </div>
             <div className="inner">

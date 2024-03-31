@@ -2,8 +2,8 @@ import React from 'react'
 
 const ResponsiveSideBarMenu = (props) => {
     return (
-        <div className={`responsive-sidebar-menu ${props.menuStatus? 'active' : ''}`}>
-            <div className="overlay"  onClick={()=>{
+        <div className={`responsive-sidebar-menu ${props.menuStatus ? 'active' : ''}`}>
+            <div className="overlay" onClick={() => {
                 props.Close()
             }} />
             <div className="sidebar-menu-inner">
@@ -48,6 +48,11 @@ const ResponsiveSideBarMenu = (props) => {
                         <li>
                             <a className="scroll-to" href="#contact">
                                 <i className="las la-envelope" /> <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a className="scroll-to" href="https://my-projects-e3u.pages.dev/">
+                                <i class="lar la-newspaper">Blogs</i>
                             </a>
                         </li>
                     </ul>
