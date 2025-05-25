@@ -14,7 +14,7 @@ const PortFolio = () => {
               <div>
               <PortfolioArea/>
               <Testmonials/>
-              <Pricing/>
+              {/* <Pricing/> */}
               <Contact/>
               </div>
             </div>

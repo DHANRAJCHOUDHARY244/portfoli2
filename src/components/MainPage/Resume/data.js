@@ -8,11 +8,6 @@ export const data = [
                 heading: 'Backend NodeJs Developer',
                 subHeading: 'ChainTech Networks'
             },
-            {
-                id: 1,
-                heading: 'Wordpress & Developer',
-                subHeading: 'Progressive Canines'
-            },
         ]
     },
     {
@@ -28,7 +23,12 @@ export const data = [
                 id: 1,
                 heading: 'Front-End WordPress Developer',
                 subHeading: 'Innovator TechLine'
-            }
+            },
+            {
+                id: 2,
+                heading: 'Wordpress & Developer',
+                subHeading: 'Progressive Canines'
+            },
         ]
     },
     {
